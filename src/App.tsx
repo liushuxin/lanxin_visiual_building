@@ -3,7 +3,7 @@ import Home from "./page/Home";
 import User from "./page/User";
 import PaiBan from "./page/Lianxi/paiban";
 import SuanFa from "./page/SuanFa";
-import G6Page from "./page/G6Page";
+// import G6Page from "./page/G6Page";
 import FormPage from "./page/Form";
 import Dashboard from "./page/Dashboard";
 import "./App.css";
@@ -24,9 +24,9 @@ function App() {
         <Link to="/suanfa" className="App-link">
           算法动画
         </Link>
-        <Link to="/g6" className="App-link">
+        {/* <Link to="/g6" className="App-link">
           G6 动画绘制
-        </Link>
+        </Link> */}
         <Link to="/form" className="App-link">
           表单测试
         </Link>
@@ -43,7 +43,7 @@ function App() {
           <Route exact path="/user" component={User} />
           <Route exact path="/paiban" component={PaiBan} />
           <Route exact path="/suanfa" component={SuanFa} />
-          <Route exact path="/g6" component={G6Page} />
+          {/* <Route exact path="/g6" component={G6Page} /> */}
           <Route exact path="/form" component={FormPage} />
           <Route exact path="/dashboard" component={Dashboard} />
         </div>
