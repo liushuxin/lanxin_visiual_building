@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>灵活页面布局</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <style>
+      ol,
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      li {
+        flex: 1;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrapper {
+        width: 95%;
+        max-width: 76em;
+        margin: 0 auto;
+        border: 1px dotted #000;
+      }
+      .row::after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrapper">
+        <h1>Important News</h1>
+      </div>
+    </header>
+    <nav role="navigation" class="navbar">
+      <div class="wrapper">
+        <ul class="navlist">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">User</a></li>
+          <li><a href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="wrapper">主题</main>
+  </body>
+</html>

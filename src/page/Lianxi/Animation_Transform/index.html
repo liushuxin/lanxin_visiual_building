@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动画和变换</title>
+    <style>
+      .text {
+        display: inline-block;
+        /* margin: 50px; */
+        width: 100px;
+        padding: 20px;
+        height: 100px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        background-color: khaki;
+        transform-origin: 10px 10px;
+        transform: translateX(10%) scale(1) skew(20deg);
+      }
+      button {
+        padding: 0.5em 1em;
+        border: 0px;
+        color: #fff;
+        border-radius: 0.25em;
+        background-color: #173b6d;
+        box-shadow: 0 0.25em 0 rgba(23, 59, 109, 0.3),
+          inset 0 1px 0 rgba(0, 0, 0, 0.3);
+        transition: all 150ms;
+      }
+      button:active {
+        box-shadow: 0 0 0 rgba(23, 59, 109, 0.3),
+          inset 0 1px 0 rgba(0, 0, 0, 0.3);
+        transform: translateY(0.25em);
+      }
+      .div_3d {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        transform: rotateY(50deg);
+        border: 2px solid #000;
+      }
+      .file-icon {
+        animation-name: jump;
+        animation-timing-function: ease-in-out;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        margin-left: 300px;
+      }
+      body {
+        perspective: 800px;
+      }
+      @keyframes jump {
+        from {
+          transform: rotate(0) translateX(-170px) rotate(0) scale(1);
+        }
+        70%,
+        100% {
+          transform: rotate(175deg) translateX(-170px) rotate(-175deg)
+            scale(0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text"></div>
+    <div style="height: 100px"></div>
+
+    <button class="file-icon">保存</button>
+    <div class="div_3d"></div>
+  </body>
+</html>

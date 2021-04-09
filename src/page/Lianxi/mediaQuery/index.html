@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>媒体查询</title>
+    <style>
+        div{
+            min-width:100px;
+            min-height:100px;
+           
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .row-quartet{
+            width:100%
+        }
+         .row-quartet > * {
+          width: 100%;
+          float: left;
+        }
+        .sub-cate {
+          width: 100%;
+        }
+      @media only screen and (min-width: 35em) {
+        .row-quartet > * {
+          width: 50%;
+          display: inline-block;
+        }
+        .sub-cate {
+          width: 100%;
+          display: inline-block;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    响应式布局
+
+    <div class="sub-cate">
+        aaa
+    </div>
+    <div class="row-quartet">
+     <div>11111111</div>
+     <div>22222222</div>
+    </div>
+  </body>
+</html

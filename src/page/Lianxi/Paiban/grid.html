@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二维布局</title>
+    <style>
+      .grid_wrap {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 200px 1fr 200px;
+        /* justify-items: center;
+        align-items: center; */
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+      .item {
+        border: 1px solid #000;
+      }
+      .item:first-child {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 2;
+        /* width: 100px; */
+        /* justify-self: start; */
+      }
+      .subcategory {
+        display: block;
+      }
+      .grad-b {
+        display: grid;
+        grid-template-columns: 20% 1fr 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-areas:
+          "hd ... ... ..."
+          "hd st1 ... st2"
+          "hd ... ... ...";
+      }
+      .subcategory-head {
+        grid-area: hd;
+        background-color: aqua;
+        min-height: 100px;
+      }
+      .story:nth-child(2) {
+        grid-area: st1;
+        background-color: azure;
+        min-height: 100px;
+      }
+      .story:nth-child(3) {
+        grid-area: st2;
+        background-color: bisque;
+        min-height: 400px;
+      }
+      .ad {
+        background-color: blueviolet;
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>二维布局</h3>
+
+    <div class="grid_wrap">
+      <div class="item"><h3>11</h3></div>
+      <div class="item">22</div>
+      <div class="item">333</div>
+      <div class="item">444</div>
+      <div class="item">555</div>
+      <div class="item">666</div>
+    </div>
+
+    <seaction class="subcategory">
+      <div class="grad-b">
+        <header class="subcategory-head">
+          <div style="height: 400px">
+            aaaaaaaaa aaaaaaaaaa aaaaaaa aaaaaaaaaaaaaaaaaaa aaaaa aaaaaaaaaa
+            aaaaaaaaa aaaaaaaaaaa aaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          </div>
+        </header>
+        <article class="story"></article>
+        <article class="story"></article>
+
+        <div class="ad ad1"></div>
+        <div class="ad ad2"></div>
+        <div class="ad ad1"></div>
+        <div class="ad ad2"></div>
+        <div class="ad ad1"></div>
+        <div class="ad ad2"></div>
+      </div>
+    </seaction>
+  </body>
+</html>

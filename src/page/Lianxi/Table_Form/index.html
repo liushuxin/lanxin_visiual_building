@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表格和表单</title>
+    <style>
+      
+        .text2{
+            background-color:#fef0f0;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+   table,tr,td,th{
+       border: 1px solid #ccc;
+       text-align: center;
+   }
+   thead{
+       border-bottom: 3px solid #666;
+      
+   }
+   .gray{
+       background-color: #eee;
+       color:#ccc
+   }
+
+   table{
+    border-collapse:collapse;
+    table-layout: fixed;
+    width:100%;
+    max-width: 25em;
+   }
+   caption{
+       text-align: left;
+       line-height: 2;
+       font-size: 1.5em;
+   }
+   td::before{
+       width:40%;
+       display: inline-block;
+       /* content: attr(data-label); */
+
+   }
+   fieldset{
+       border:0;
+       padding: 0.01px 0 0 0;
+       margin:0;
+       min-width:0;
+       display:table-cell
+      
+   }
+   .fieldset-wrapper {
+       padding:1em;
+       margin-bottom:1em;
+       border:1px solid #eee;
+       background-color: #fff;
+       box-shadow: 0 0 4px rgb(0,0,0,0.25);
+   }
+   @-moz-document url-prefix(){
+         fieldset{
+             display:table-cell;
+         }  
+    }
+    :root .fieldset-wrapper{
+        border:0;
+    }
+    legend{
+        padding:0 0 0.5em 0;
+        font-weight: bold;
+        color:#777;
+        display:table;
+    }
+    input,textarea{
+        font:inherit
+    }
+    .field-text{
+        max-width:20em;
+    }
+    .field-text label{
+        cursor:pointer;
+    }
+    .field-text label,
+    .field-text input,
+    textarea{
+        width:100%;
+        box-sizing: border-box;
+
+    }
+    .field-text input,.field-text textarea{
+        padding:.375em .3125em .3125em;
+        border: 1px solid #ccc;
+        border-radius: .25em;
+        -webkit-appearance: none;
+
+    }
+    .field-text input:focus,textarea{
+      border-radius: 0 0 .5em rgb(93,162,248,0.5);
+      border-color: #5da2f8;
+      outline: 0;
+    }
+    ::-webkit-input-placeholder{
+        font-style:italic;
+      /* color:red; */
+    }
+
+    </style>
+  </head>
+  <body>
+  表格和表单
+
+    <div>
+
+        <table >
+            <caption >
+                表头
+            </caption>
+            <colgroup>
+                <col class="text2">
+                <col class="text">
+                <col class="text">
+                <col class="text">
+                <col class="text">
+                <col class="text">
+                <col class="text2">
+            </colgroup>
+            <thead>
+                <th scope="col">周日</th>
+                <th scope="col">周一</th>
+                <th scope="col">周二</th>
+                <th scope="col">周三</th>
+                <th scope="col">周四</th>
+                <th scope="col">周五</th>
+                <th scope="col">周六</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="周一">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+        
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td class="gray">1</td>
+                    <td class="gray">2</td>
+                    <td class="gray">3</td>
+                    <td class="gray">4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div><h1>表单</h1></div>
+<div class="fieldset-wrapper">
+    <fieldset>
+        <legend> 字段组标题</legend>
+        <p class="field field-text">
+            <label for="username">
+                用户名
+            </label>
+            <input required type="text" placeholder="请输入用户名" name="username" id="username">
+        </p>
+        <p class="field field-text">
+            <label for="password">
+                密码
+            </label>
+            <input type="password" name="password" id="password">
+        </p>
+        <p class="field field-text">
+            <label for="emial">
+                邮箱
+            </label>
+            <input type="emial" name="emial" id="emial">
+        </p>
+        <p class="field field-text">
+            <label for="comment">
+                评论
+            </label>
+            <textarea cols="10" rows="5" name="comment" id="comment"></textarea>
+        </p>
+        <p class="field field-text">
+            <label for="emial">
+                记住密码
+            </label>
+         
+        </p>
+        
+    </fieldset>
+</div>
+       
+    </div>
+  </body>
+</html
