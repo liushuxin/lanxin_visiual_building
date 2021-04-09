@@ -1,7 +1,7 @@
 import { Route, Link } from "react-router-dom";
 import Home from "./page/Home";
 import User from "./page/User";
-import PaiBan from "./page/Lianxi/paiban";
+// import PaiBan from "./page/Lianxi/paiban";
 import SuanFa from "./page/SuanFa";
 // import G6Page from "./page/G6Page";
 import FormPage from "./page/Form";
@@ -18,9 +18,9 @@ function App() {
         <Link to="/user" className="App-link">
           用户管理
         </Link>
-        <Link to="/paiban" className="App-link">
+        {/* <Link to="/paiban" className="App-link">
           paiban
-        </Link>
+        </Link> */}
         <Link to="/suanfa" className="App-link">
           算法动画
         </Link>
@@ -41,7 +41,7 @@ function App() {
         <div className="content">
           <Route exact path="/a" component={Home} />
           <Route exact path="/user" component={User} />
-          <Route exact path="/paiban" component={PaiBan} />
+          {/* <Route exact path="/paiban" component={PaiBan} /> */}
           <Route exact path="/suanfa" component={SuanFa} />
           {/* <Route exact path="/g6" component={G6Page} /> */}
           <Route exact path="/form" component={FormPage} />
