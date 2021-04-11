@@ -28,10 +28,6 @@ export default function HOME(props: any) {
         <br />
         File Size: {fileInfo.size}
       </div>
-
-      <div
-        style={{ height: "1000px", backgroundColor: "red", width: "30px" }}
-      ></div>
     </div>
   );
 }

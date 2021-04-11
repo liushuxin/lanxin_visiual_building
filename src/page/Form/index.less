@@ -1,0 +1,88 @@
+@import "~react-grid-layout/css/styles.css";
+@import "~react-resizable/css/styles.css";
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #1ed6ce;
+  border-bottom: 2px solid #1ed6ce;
+  font-family: Microsoft YaHei, Chinese Quote, -apple-system, BlinkMacSystemFont,
+    Segoe UI, PingFang SC, Hiragino Sans GB, Helvetica Neue, Helvetica, Arial;
+}
+.react-grid-item.react-grid-placeholder {
+  background: #888;
+  opacity: 0.2;
+  transition-duration: 100ms;
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.config-drag-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 88px);
+}
+.config-drag-main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.form-class {
+  height: 100%;
+  display: flex;
+}
+.form_content {
+  flex: 1;
+  background: #eee;
+  margin-left: 20px;
+  padding: 10px;
+}
+.layout-container {
+  width: 100%;
+  border: 1px dotted #ccc;
+  min-height: 200px;
+}
+.layout-preview-container {
+  width: 100%;
+  border: 0px;
+  min-height: 200px;
+}
+.item-react-grid {
+  position: relative;
+  background: white;
+  color: #000;
+  &:hover {
+    z-index: 10;
+  }
+}
+.item-grid-show {
+  .item-react-grid;
+  overflow: hidden;
+}
+.header {
+  line-height: 50px;
+  background: white;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  padding-right: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  button + button {
+    margin-left: 20px;
+  }
+}
